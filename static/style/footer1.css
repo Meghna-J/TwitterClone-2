@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.final-container{
+    width: 400px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    position: relative;
+}
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    position: relative;
+    padding-top: 12px;
+}
+.follow-container{
+    background-color: #f5f8fa;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+.follow-container h1{
+    font-size: 19px;
+    font-weight: bold;
+    color: #14171a;
+    display: flex;
+    flex-direction: column;
+}
+.follow-container .who-follow{
+    /* padding: 10px 15px; */
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    align-items: stretch;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6ecf0;
+}
+.who-follow:hover{
+    background-color: rgb(241, 240, 240);
+}
+.who-follow:last-child{
+    border-bottom:none;
+}
+.who-follow .author{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.who-follow .nameAuthor:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.who-follow .author-profile{
+    display: flex;
+    flex-direction: row; 
+    flex-shrink: 1;
+    box-sizing: border-box;
+    /* position: relative; */
+    align-items: center;
+    /* max-width: 100%; */
+    /* margin-top: 2px; */
+    color: #657786;
+}
+.follow-btn{
+    border: 1px solid #051018;
+    background-color: #14171a;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px;
+    min-width: 67px;
+    margin-left: 15px;
+    text-align: center;
+    height: 40px;
+}
+.follow-btn:hover{
+    background: rgba(29,161,242,0.1);
+    cursor: pointer;
+}
