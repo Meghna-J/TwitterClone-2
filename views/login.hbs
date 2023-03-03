@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    {{!-- <link rel="stylesheet" href="styles/style.css" /> --}}
+    <link rel="stylesheet" href="/style/styles.css" />
+    <style>
+      body { background-color: rgb(0, 0, 0, 0.4) } @media only screen and (max-width:
+      600px) { body { background-color: white; } }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <img class="imgLogo" src="./pics/twitterlogo.png" />
+      </div>
+      <div class="signInHeading">
+        <h class="headingSignIn">Sign in to Twitter</h>
+      </div>
+      <div class="d-grid gap-2 col-7 mx-auto">
+        <button class="btn btn-light button" type="button"><img
+            src="./pics/googlesignin.png"
+            width="23"
+            style="margin-right:5px"
+          />Sign in with Google</button>
+        <button class="btn btn-light button" type="button"><img
+            src="./pics/applelogo.png"
+            width="23"
+            style="margin-right:3px; margin-top:-2px"
+          /><b>Sign in with Apple</b></button>
+      </div>
+      <div class="line-1">
+        <hr width="50%" height="3px" style="margin-top:5%; margin-bottom:0%" />
+        <h width="20px" style="text-align:center;margin-top:13px;">or</h>
+        <hr width="50%" height="3px" style="margin-top:5%; margin-bottom:0%" />
+      </div>
+      {{!-- LOGIN FORM --}}
+      <form id="signInForm" action="/login" method="POST">
+        <div class="form-row">
+          <div class="form-group col-md-6" style="margin:auto; margin-top:2%;">
+            <input
+              type="email"
+              name="username"
+              class="form-control email"
+              id="inputEmail4"
+              placeholder="Phone,email or username"
+            />
+          </div>
+          <div class="form-group col-md-6" style="margin:auto; margin-top:1%">
+            <input
+              type="password"
+              name="password"
+              class="form-control pwd"
+              id="inputPassword4"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div class="d-grid gap-2 col-7 mx-auto">
+            <input type="submit" class="btn btn-dark button" id="submitDetails" value="Sign in">
+        </div>
+      </form>
+      <div class="d-grid gap-2 col-7 mx-auto">
+        <button type="button" class="btn btn-light button">Forgot Password?</button>
+      </div>
+      <p class="signUp" style="margin-top:20px">Don't have an account?
+        <a href="#">sign up</a></p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{{!-- <nav class="navbar"> --}}
+    <div class="nav">
+        <div class="main-icon">
+            <img class="icon" src="./pics/twitterlogo.png" height="50px" width="50px">
+        </div>
+        <div class="main-icon">
+            <i class="fa-solid fa-house"></i>
+            {{!-- <img class="icon" src="\styles\home.png"> --}}
+            <a href="#" class="span">Home</a> 
+        </div>
+        <div class="main-icon">
+            <i class="fa-solid fa-hashtag"></i>
+            {{!-- <img class="icon" src="\styles\hashing.png"> --}}
+            <a href="#" class="span">Explore</a>
+        </div>
+        <div class="main-icon">
+            <i class="fa-regular fa-bell"></i>
+            {{!-- <img class="icon" src="\styles\bell.png"> --}}
+            <a href="#" class="span">Notifications</a>
+        </div>
+        <div class="main-icon">
+            <i class="fa-regular fa-envelope"></i>
+            {{!-- <img class="icon" src="\styles\message.png"> --}}
+            <a href="#" class="span">Messages</a>
+        </div>
+        <div class="main-icon">
+            <i class="fa-regular fa-bookmark"></i>
+            {{!-- <img class="icon" src="\styles\bookmark.png"> --}}
+            <a href="#" class="span">Bookmarks</a>
+        </div>
+        <div class="main-icon">
+            {{!-- <img class="icon" src="\styles\profile.png"> --}}
+            <i class="fa-regular fa-user"></i>
+            <a href="#" class="span">Profile</a>
+        </div>
+        <div class="main-icon">
+           <i class="fa-solid fa-list"></i>
+            {{!-- <img class="icon" src="\styles\more.png"> --}}
+            <a href="#" class="span">More</a>
+        </div>
+        <form action="/home/{{userId}}/newTweet" method="GET" class="newTweet">
+            <button type="submit" class="tweet-btn">Tweet</button>
+        </form>
+        {{!-- <div class="profile">
+            <h2>ShreyaGupta</h2>
+            <p></p>
+        </div> --}}
+    </div>
+    
+{{!-- </nav> --}}

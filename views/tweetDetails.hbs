@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweets</title>
+    <link rel="stylesheet" href="/style/singletweet.css">
+    <script src="https://kit.fontawesome.com/f0c462b4bc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="singleTweetThread">
+        <a href="/home" style="margin-top:10px">
+            <span class="back-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </span>
+        </a>
+        <h class="tweetHead" style="font-size:20px; font-weight:600; margin-top:10px">Tweet</h>
+        <hr style="margin-top:10px">
+        <div class="tweetCard">
+            <div class="tweetItems">
+              <div class="profileImg" style="margin:10px 0px">
+                <img
+                  src={{tweet.imgdp}}
+                  width="60px"
+                  style="border-radius:100%;"
+                />
+              </div>
+              <div class="Tweetinfo" style="margin:10px 0px; margin-right:50px; width:100px">
+                  <div class="userName">
+                    <a class="userName" href="/account/{{tweet._id}}"><b
+                    >{{tweet.name}}</b></a>
+                  </div>
+                  {{!-- <b>{{tweet.name}}</b> --}}
+                  {{tweet.username1}}
+              </div>
+            </div>
+            <div class="tweetContent">
+                {{tweet.tweetContent}}
+            </div>
+            <div class="dateAndTime">
+                {{tweet.time}} · {{tweet.date}}
+            </div>
+            <div class="options">
+              <hr>
+              <div class="option-box" style="display:flex; gap:150px; margin: 30px 70px">
+                <div class="reply"><a class="reply" href="/tweet/{{tweet._id}}/reply"><i class="fa-regular fa-comment fa-2xl"></i></a></div>
+                <div class="retweet"><a class="retweet" href="#"><i class="fa-solid fa-retweet fa-2xl"></i></a></div>
+                <div class="like"><a class="like" href="/tweet/{{tweet._id}}/likes"><i class="fa-regular fa-heart fa-2xl"></i><div class="like">{{tweet.likes}}</div> </a></div>
+                <div class="upload"><a class="upload" href="#"><i class="fa-solid fa-arrow-up-from-bracket fa-2xl"></i></a></div>
+              </div>
+              <hr>
+            </div>
+        </div>
+        <div class="replySection">
+          {{#each tweet.reply as |reply|}}
+            <div class="Tweetinfo" style="margin:10px 0px; margin-right:50px;margin-left:3%;">
+                <div class="tweetUserInfo">
+                  <a class="userName" href="/account/{{tweet._id}}"><b
+                    >{{reply.username}}</b></a>
+                  {{!-- <b>{{reply.name}}</b> --}}
+                  {{reply.username}}
+                  <p>Replying to {{username}}</p>
+                </div>
+                <div class="replysContent">
+                  {{reply.replyContent}}
+                </div>
+              </div>
+              <hr style="margin-top:10px">
+          {{/each}}
+        </div>
+    </div>
+</body>
+</html>
